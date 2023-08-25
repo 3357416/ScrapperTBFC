@@ -1,0 +1,156 @@
+
+serialNumber: G8734T10007E
+Carrier: Cell2
+Station: TBFC203
+Date: 2023-08-11 12:50:13
+Initial Values:
+Initial Battery: 53%
+Initial Battery date2023-08-11 12:50:16FG_temp:  38.50 deg 
+FG_current:  200 mA
+FG_voltage:  3889 mV
+FG_capacity:  2174 mAh
+FG_avg_voltage:  3875 mV
+FG_RSOC:  53%
+FG_USOC:  56%
+
+Final Values:
+Final Battery: 56%
+Final Battery date2023-08-11 12:53:02FG_temp:  39.79 deg 
+FG_current:  1219 m
+FG_voltage:  4091 mV
+FG_capacity:  2169 mAh
+FG_avg_voltage:  4090 mV
+FG_RSOC:  56%
+FG_USOC:  57%
+
+
+
+serialNumber: G8734T10007E
+Carrier: Cell2
+Station: TBFC203
+Date: 2023-08-11 12:50:13
+Initial Values:
+Initial Battery: 53%
+Initial Battery date2023-08-11 12:50:16FG_temp:  38.50 deg 
+FG_current:  200 mA
+FG_voltage:  3889 mV
+FG_capacity:  2174 mAh
+FG_avg_voltage:  3875 mV
+FG_RSOC:  53%
+FG_USOC:  56%
+
+Final Values:
+Final Battery: 56%
+Final Battery date2023-08-11 12:53:02FG_temp:  39.79 deg 
+FG_current:  1219 m
+FG_voltage:  4091 mV
+FG_capacity:  2169 mAh
+FG_avg_voltage:  4090 mV
+FG_RSOC:  56%
+FG_USOC:  57%
+
+
+
+serialNumber: G8734T10007E
+Carrier: Cell2
+Station: TBFC203
+Date: 2023-08-11 12:50:13
+Initial Values:
+Initial Battery: 53%
+Initial Battery date2023-08-11 12:50:16FG_temp:  38.50 deg 
+FG_current:  200 mA
+FG_voltage:  3889 mV
+FG_capacity:  2174 mAh
+FG_avg_voltage:  3875 mV
+FG_RSOC:  53%
+FG_USOC:  56%
+
+Final Values:
+Final Battery: 56%
+Final Battery date2023-08-11 12:53:02FG_temp:  39.79 deg 
+FG_current:  1219 m
+FG_voltage:  4091 mV
+FG_capacity:  2169 mAh
+FG_avg_voltage:  4090 mV
+FG_RSOC:  56%
+FG_USOC:  57%
+
+
+
+serialNumber: G8734T10007E
+Carrier: Cell2
+Station: TBFC203
+Date: 2023-08-11 12:50:13
+Initial Values:
+Initial Battery: 53%
+Initial Battery date2023-08-11 12:50:16FG_temp:  38.50 deg 
+FG_current:  200 mA
+FG_voltage:  3889 mV
+FG_capacity:  2174 mAh
+FG_avg_voltage:  3875 mV
+FG_RSOC:  53%
+FG_USOC:  56%
+
+Final Values:
+Final Battery: 56%
+Final Battery date2023-08-11 12:53:02FG_temp:  39.79 deg 
+FG_current:  1219 m
+FG_voltage:  4091 mV
+FG_capacity:  2169 mAh
+FG_avg_voltage:  4090 mV
+FG_RSOC:  56%
+FG_USOC:  57%
+
+
+
+serialNumber: G8734T10007E
+Carrier: Cell2
+Station: TBFC203
+Date: 2023-08-11 12:50:13
+Initial Values:
+Initial Battery: 53%
+Initial Battery date2023-08-11 12:50:16FG_temp:  38.50 deg 
+FG_current:  200 mA
+FG_voltage:  3889 mV
+FG_capacity:  2174 mAh
+FG_avg_voltage:  3875 mV
+FG_RSOC:  53%
+FG_USOC:  56%
+
+Final Values:
+Final Battery: 56%
+Final Battery date2023-08-11 12:53:02FG_temp:  39.79 deg 
+FG_current:  1219 m
+FG_voltage:  4091 mV
+FG_capacity:  2169 mAh
+FG_avg_voltage:  4090 mV
+FG_RSOC:  56%
+FG_USOC:  57%
+
+
+
+serialNumber: G8734T10007E
+Carrier: Cell2
+Station: TBFC203
+Date: 2023-08-11 12:50:13
+Initial Values:
+Initial Battery: 53%
+Initial Battery date2023-08-11 12:50:16FG_temp:  38.50 deg 
+FG_current:  200 mA
+FG_voltage:  3889 mV
+FG_capacity:  2174 mAh
+FG_avg_voltage:  3875 mV
+FG_RSOC:  53%
+FG_USOC:  56%
+
+Final Values:
+Final Battery: 56%
+Final Battery date2023-08-11 12:53:02FG_temp:  39.79 deg 
+FG_current:  1219 m
+FG_voltage:  4091 mV
+FG_capacity:  2169 mAh
+FG_avg_voltage:  4090 mV
+FG_RSOC:  56%
+FG_USOC:  57%
+
+

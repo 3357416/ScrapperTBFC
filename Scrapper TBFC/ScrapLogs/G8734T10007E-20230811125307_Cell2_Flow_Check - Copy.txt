@@ -1,0 +1,937 @@
+2023-08-11 12:50:13,997 [18] INFO Cell2:ML.ViewModels.CellVM - 
+
+#################################################################################################################
+Test run commencing. Serial Number: G8734T10007E DateTime: 08/11/2023 12:50:13
+#################################################################################################################
+2023-08-11 12:50:14,015 [18] INFO Cell2:ML.Specifications.SpecLimits - Start GetSpecLimits for TBFC
+2023-08-11 12:50:14,019 [18] DEBUG Cell2:ML.Specifications.SpecLimits - http://webapifactory.mfg.goldeneyetech.net/DataService/Specfication/Get?buildId=ALL&process=TBFC
+2023-08-11 12:50:14,044 [18] INFO Cell2:ML.Specifications.SpecLimits - Finished GetSpecLimits
+2023-08-11 12:50:14,047 [18] DEBUG Cell2:ML.ViewModels.CellVM - Test sequence started for serial number G8734T10007E
+2023-08-11 12:50:14,047 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Verify Serial Number Format || G8734T10007E || Pass
+2023-08-11 12:50:14,047 [18] INFO Cell2:ML.ViewModels.CellVM - Step <<WaitForStart>> index [0 / 7] passed on attempt <<1 of 1>>
+2023-08-11 12:50:14,047 [18] INFO Cell2:ML.ViewModels.CellVM - Clean run, no DependencySteps. Resuming main TestSequence steps
+2023-08-11 12:50:14,057 [18] INFO Cell2:ML.ViewModels.CellVM - Step <<WaitForStart>> will be followed by <<SetupStationSw>> per MARIO TestSequence config list
+2023-08-11 12:50:14,057 [18] INFO Cell2:ML.ViewModels.CellVM - Cell2 next step [SetupStationSw] is not blocked by other cells
+2023-08-11 12:50:14,066 [18] INFO Cell2:ML.ViewModels.CellVM - 
+
+#################################################################################################################
+Cell2 Device SN: G8734T10007E Test Name: Station SW Check [1 / 7] Attempt: 1 / 1
+#################################################################################################################
+2023-08-11 12:50:14,070 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Station SW Version || v2023.1.9.2 || Pass
+2023-08-11 12:50:14,081 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Station Mode || PRODUCTION || Pass
+2023-08-11 12:50:14,081 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Win FCMD COM Port || COM5 || Pass
+2023-08-11 12:50:14,106 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  -v
+2023-08-11 12:50:14,170 [26] ERROR Cell2:ML.Command.Proc - FCMD Client version 0.7
+2023-08-11 12:50:14,186 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  -v with ExitCode 0
+2023-08-11 12:50:14,186 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - FCMD Version || 0.7 || Pass
+2023-08-11 12:50:14,207 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Flow Check || Disabled || Abort
+2023-08-11 12:50:14,207 [18] INFO Cell2:ML.ViewModels.CellVM - Step <<SetupStationSw>> index [1 / 7] aborted on attempt <<1 of 1>>
+2023-08-11 12:50:14,207 [18] INFO Cell2:ML.ViewModels.CellVM - No additional retries allowed for the above failed step
+2023-08-11 12:50:14,207 [18] INFO Cell2:ML.ViewModels.CellVM - Next step <<SetupEquipment>> is determined by MARIO TestSequence config, subject to retry logic override
+2023-08-11 12:50:14,207 [18] INFO Cell2:ML.ViewModels.CellVM - Aborted step: <<SetupStationSw>>. Aborted measurement: <<Flow Check>>
+2023-08-11 12:50:14,207 [18] INFO Cell2:ML.ViewModels.CellVM - Step <<SetupStationSw>> will be followed by <<SetupEquipment>> per MARIO TestSequence config list
+2023-08-11 12:50:14,207 [18] INFO Cell2:ML.ViewModels.CellVM - Cell2 next step [SetupEquipment] is not blocked by other cells
+2023-08-11 12:50:14,226 [18] INFO Cell2:ML.ViewModels.CellVM - 
+
+#################################################################################################################
+Cell2 Device SN: G8734T10007E Test Name: Set-up Equipment [2 / 7] Attempt: 1 / 1
+#################################################################################################################
+2023-08-11 12:50:14,226 [18] INFO Cell2:ML.ViewModels.CellVM - Step <<SetupEquipment>> index [2 / 7] passed on attempt <<1 of 1>>
+2023-08-11 12:50:14,226 [18] INFO Cell2:ML.ViewModels.CellVM - Clean run, no DependencySteps. Resuming main TestSequence steps
+2023-08-11 12:50:14,226 [18] INFO Cell2:ML.ViewModels.CellVM - Step <<SetupEquipment>> will be followed by <<ReadDeviceSn>> per MARIO TestSequence config list
+2023-08-11 12:50:14,226 [18] INFO Cell2:ML.ViewModels.CellVM - Cell2 next step [ReadDeviceSn] is not blocked by other cells
+2023-08-11 12:50:14,246 [18] INFO Cell2:ML.ViewModels.CellVM - 
+
+#################################################################################################################
+Cell2 Device SN: G8734T10007E Test Name: Verify Device Serial Number [3 / 7] Attempt: 1 / 1
+#################################################################################################################
+2023-08-11 12:50:14,246 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  dev_info 09
+2023-08-11 12:50:14,526 [29] DEBUG Cell2:ML.Command.Proc - OK: G772PT1002BK
+2023-08-11 12:50:14,557 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  dev_info 09 with ExitCode 0
+2023-08-11 12:50:14,557 [18] INFO Cell2:ML.TotemCmd.Models.DevInfo - Read Board Serial Number G772PT1002BK
+2023-08-11 12:50:14,557 [18] INFO Cell2:ML.ViewModels.CellVM - Current board Serial Number <<G772PT1002BK>>
+2023-08-11 12:50:14,557 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Board Serial Number || G772PT1002BK || Pass
+2023-08-11 12:50:14,573 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  dev_info 00
+2023-08-11 12:50:14,870 [26] DEBUG Cell2:ML.Command.Proc - OK: G8734T10007E
+2023-08-11 12:50:14,885 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  dev_info 00 with ExitCode 0
+2023-08-11 12:50:14,885 [18] INFO Cell2:ML.TotemCmd.Models.DevInfo - Read DUT Serial Number G8734T10007E
+2023-08-11 12:50:14,885 [18] INFO Cell2:ML.ViewModels.CellVM - Current device Serial Number <<G8734T10007E>> matches scanned in string <<G8734T10007E>>
+2023-08-11 12:50:14,885 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Device Serial Number || G8734T10007E || Pass
+2023-08-11 12:50:14,916 [18] INFO Cell2:ML.ViewModels.CellVM - Step <<ReadDeviceSn>> index [3 / 7] passed on attempt <<1 of 1>>
+2023-08-11 12:50:14,916 [18] INFO Cell2:ML.ViewModels.CellVM - Clean run, no DependencySteps. Resuming main TestSequence steps
+2023-08-11 12:50:14,916 [18] INFO Cell2:ML.ViewModels.CellVM - Step <<ReadDeviceSn>> will be followed by <<ReadDeviceFw>> per MARIO TestSequence config list
+2023-08-11 12:50:14,916 [18] INFO Cell2:ML.ViewModels.CellVM - Cell2 next step [ReadDeviceFw] is not blocked by other cells
+2023-08-11 12:50:14,932 [18] INFO Cell2:ML.ViewModels.CellVM - 
+
+#################################################################################################################
+Cell2 Device SN: G8734T10007E Test Name: Device FW Tags [4 / 7] Attempt: 1 / 2
+#################################################################################################################
+2023-08-11 12:50:14,932 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  dev_info 04
+2023-08-11 12:50:15,268 [26] DEBUG Cell2:ML.Command.Proc - OK: 1683561234
+2023-08-11 12:50:15,299 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  dev_info 04 with ExitCode 0
+2023-08-11 12:50:15,299 [18] INFO Cell2:ML.TotemCmd.Models.DevInfo - Read DUT Firmware Build Date 1683561234
+2023-08-11 12:50:15,299 [18] INFO Cell2:ML.ViewModels.CellVM - Device FW Build Date <<1683561234>> matches expected string <<Spec Not Found>> in MARIO Spec
+2023-08-11 12:50:15,299 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - TotemSwBuildDate || 1683561234 || Pass
+2023-08-11 12:50:15,315 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  dev_info 02
+2023-08-11 12:50:15,647 [29] DEBUG Cell2:ML.Command.Proc - OK: FACTORY
+2023-08-11 12:50:15,683 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  dev_info 02 with ExitCode 0
+2023-08-11 12:50:15,683 [18] INFO Cell2:ML.TotemCmd.Models.DevInfo - Read DUT Firmware Build Type FACTORY
+2023-08-11 12:50:15,683 [18] INFO Cell2:ML.ViewModels.CellVM - Device FW Build Type <<FACTORY>> matches expected string <<FACTORY>> in MARIO Spec
+2023-08-11 12:50:15,683 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - TotemSwType || FACTORY || Pass
+2023-08-11 12:50:15,698 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  dev_info 03
+2023-08-11 12:50:15,981 [26] DEBUG Cell2:ML.Command.Proc - OK: 5628-F8
+2023-08-11 12:50:16,021 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  dev_info 03 with ExitCode 0
+2023-08-11 12:50:16,021 [18] INFO Cell2:ML.TotemCmd.Models.DevInfo - Read DUT Firmware Build Version Number 5628-F8
+2023-08-11 12:50:16,021 [18] INFO Cell2:ML.ViewModels.CellVM - Device FW Build Number <<5628-F8>> matches expected string <<Spec Not Found>> in MARIO Spec
+2023-08-11 12:50:16,021 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - TotemSwBuildNumber || 5628-F8 || Pass
+2023-08-11 12:50:16,041 [18] INFO Cell2:ML.ViewModels.CellVM - Step <<ReadDeviceFw>> index [4 / 7] passed on attempt <<1 of 2>>
+2023-08-11 12:50:16,041 [18] INFO Cell2:ML.ViewModels.CellVM - Clean run, no DependencySteps. Resuming main TestSequence steps
+2023-08-11 12:50:16,041 [18] INFO Cell2:ML.ViewModels.CellVM - Step <<ReadDeviceFw>> will be followed by <<ChargeToSpec>> per MARIO TestSequence config list
+2023-08-11 12:50:16,041 [18] INFO Cell2:ML.ViewModels.CellVM - Cell2 next step [ChargeToSpec] is not blocked by other cells
+2023-08-11 12:50:16,061 [18] INFO Cell2:ML.ViewModels.CellVM - 
+
+#################################################################################################################
+Cell2 Device SN: G8734T10007E Test Name: Charge To Spec [5 / 7] Attempt: 1 / 1
+#################################################################################################################
+2023-08-11 12:50:16,070 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:50:16,451 [29] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:50:16,451 [29] DEBUG Cell2:ML.Command.Proc - FG Temp: 38.50 deg C
+2023-08-11 12:50:16,451 [29] DEBUG Cell2:ML.Command.Proc - FG current: 200 mA
+2023-08-11 12:50:16,451 [29] DEBUG Cell2:ML.Command.Proc - FG voltage: 3889 mV
+2023-08-11 12:50:16,451 [29] DEBUG Cell2:ML.Command.Proc - FG capacity: 2174 mAh
+2023-08-11 12:50:16,451 [29] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 3875 mV
+2023-08-11 12:50:16,451 [29] DEBUG Cell2:ML.Command.Proc - FG RSOC: 53%
+2023-08-11 12:50:16,451 [29] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:50:16,491 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:50:16,491 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:50:16,791 [30] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 53%
+2023-08-11 12:50:16,831 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:50:16,831 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 53 Percent
+2023-08-11 12:50:16,831 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Initial Battery SoC || 53 || LL:  0 || UL:  100 || Pass
+2023-08-11 12:50:16,847 [18] INFO Cell2:ML.ViewModels.CellVM - Battery IGNORED on initial readings: 53%
+2023-08-11 12:50:16,848 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  i2c 01004A2203
+2023-08-11 12:50:17,151 [34] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:50:17,171 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  i2c 01004A2203 with ExitCode 0
+2023-08-11 12:50:17,173 [18] INFO Cell2:ML.TotemCmd.Models.I2C - Wrote 1 byte(s) to I2C Bus number 0x00, Device address 0x4A, Register 0x22, HEX value = 0x03, (int) 3
+2023-08-11 12:50:17,173 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fiducial 0000
+2023-08-11 12:50:17,492 [26] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:50:17,539 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fiducial 0000 with ExitCode 0
+2023-08-11 12:50:17,539 [18] INFO Cell2:ML.TotemCmd.Models.Fiducial - Turned off fiducials for circuit 00
+2023-08-11 12:50:17,539 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  mode 0105
+2023-08-11 12:50:17,867 [26] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:50:17,883 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  mode 0105 with ExitCode 0
+2023-08-11 12:50:22,891 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  i2c 01003859003C
+2023-08-11 12:50:23,250 [29] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:50:23,266 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  i2c 01003859003C with ExitCode 0
+2023-08-11 12:50:23,266 [18] INFO Cell2:ML.TotemCmd.Models.I2C - Wrote 2 byte(s) to I2C Bus number 0x00, Device address 0x38, Register 0x59, HEX value = 0x003C (as string)
+2023-08-11 12:50:23,266 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Enter Charge-Only Mode || True || Pass
+2023-08-11 12:50:28,305 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:50:28,618 [45] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:50:28,618 [45] DEBUG Cell2:ML.Command.Proc - FG Temp: 40.59 deg C
+2023-08-11 12:50:28,618 [45] DEBUG Cell2:ML.Command.Proc - FG current: 1220 mA
+2023-08-11 12:50:28,618 [45] DEBUG Cell2:ML.Command.Proc - FG voltage: 4057 mV
+2023-08-11 12:50:28,618 [45] DEBUG Cell2:ML.Command.Proc - FG capacity: 2175 mAh
+2023-08-11 12:50:28,618 [45] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 3966 mV
+2023-08-11 12:50:28,633 [45] DEBUG Cell2:ML.Command.Proc - FG RSOC: 53%
+2023-08-11 12:50:28,633 [45] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:50:28,665 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:50:28,665 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:50:28,970 [33] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 53%
+2023-08-11 12:50:28,985 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:50:28,985 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 53 Percent
+2023-08-11 12:50:28,985 [18] INFO Cell2:ML.ViewModels.CellVM - Detected change of more than 1% from last reading <<53%>>. Will ignore current reading <<53%>>
+2023-08-11 12:50:28,985 [18] INFO Cell2:ML.ViewModels.CellVM - Battery IGNORED on initial readings: -2147483648%
+2023-08-11 12:50:33,996 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:50:34,293 [30] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:50:34,293 [30] DEBUG Cell2:ML.Command.Proc - FG Temp: 40.59 deg C
+2023-08-11 12:50:34,293 [30] DEBUG Cell2:ML.Command.Proc - FG current: 1220 mA
+2023-08-11 12:50:34,293 [30] DEBUG Cell2:ML.Command.Proc - FG voltage: 4061 mV
+2023-08-11 12:50:34,293 [30] DEBUG Cell2:ML.Command.Proc - FG capacity: 2174 mAh
+2023-08-11 12:50:34,293 [30] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 3990 mV
+2023-08-11 12:50:34,308 [30] DEBUG Cell2:ML.Command.Proc - FG RSOC: 53%
+2023-08-11 12:50:34,308 [30] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:50:34,340 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:50:34,340 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:50:34,643 [44] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 53%
+2023-08-11 12:50:34,658 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:50:34,658 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 53 Percent
+2023-08-11 12:50:34,658 [18] INFO Cell2:ML.ViewModels.CellVM - Battery IGNORED on initial readings: 53%
+2023-08-11 12:50:39,682 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:50:39,995 [29] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:50:39,995 [29] DEBUG Cell2:ML.Command.Proc - FG Temp: 40.50 deg C
+2023-08-11 12:50:39,995 [29] DEBUG Cell2:ML.Command.Proc - FG current: 1220 mA
+2023-08-11 12:50:39,995 [29] DEBUG Cell2:ML.Command.Proc - FG voltage: 4066 mV
+2023-08-11 12:50:39,995 [29] DEBUG Cell2:ML.Command.Proc - FG capacity: 2173 mAh
+2023-08-11 12:50:39,995 [29] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4016 mV
+2023-08-11 12:50:40,010 [29] DEBUG Cell2:ML.Command.Proc - FG RSOC: 53%
+2023-08-11 12:50:40,010 [29] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:50:40,026 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:50:40,026 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:50:40,350 [39] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 53%
+2023-08-11 12:50:40,381 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:50:40,381 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 53 Percent
+2023-08-11 12:50:40,381 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 53% >>> 56% target
+2023-08-11 12:50:45,393 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:50:45,706 [35] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:50:45,706 [35] DEBUG Cell2:ML.Command.Proc - FG Temp: 40.29 deg C
+2023-08-11 12:50:45,706 [35] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:50:45,706 [35] DEBUG Cell2:ML.Command.Proc - FG voltage: 4069 mV
+2023-08-11 12:50:45,706 [35] DEBUG Cell2:ML.Command.Proc - FG capacity: 2172 mAh
+2023-08-11 12:50:45,721 [35] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4034 mV
+2023-08-11 12:50:45,721 [35] DEBUG Cell2:ML.Command.Proc - FG RSOC: 54%
+2023-08-11 12:50:45,721 [35] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:50:45,737 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:50:45,737 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:50:46,067 [37] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 54%
+2023-08-11 12:50:46,082 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:50:46,082 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 54 Percent
+2023-08-11 12:50:46,082 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Charing Batery SoC Level || 54 % || Pass
+2023-08-11 12:50:46,098 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 54% >>> 56% target
+2023-08-11 12:50:51,109 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:50:51,421 [35] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:50:51,421 [35] DEBUG Cell2:ML.Command.Proc - FG Temp: 40.20 deg C
+2023-08-11 12:50:51,421 [35] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:50:51,421 [35] DEBUG Cell2:ML.Command.Proc - FG voltage: 4072 mV
+2023-08-11 12:50:51,421 [35] DEBUG Cell2:ML.Command.Proc - FG capacity: 2172 mAh
+2023-08-11 12:50:51,421 [35] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4047 mV
+2023-08-11 12:50:51,437 [35] DEBUG Cell2:ML.Command.Proc - FG RSOC: 54%
+2023-08-11 12:50:51,437 [35] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:50:51,453 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:50:51,453 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:50:51,788 [44] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 54%
+2023-08-11 12:50:51,820 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:50:51,820 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 54 Percent
+2023-08-11 12:50:51,820 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 54% >>> 56% target
+2023-08-11 12:50:56,838 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:50:57,166 [27] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:50:57,166 [27] DEBUG Cell2:ML.Command.Proc - FG Temp: 40.20 deg C
+2023-08-11 12:50:57,166 [27] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:50:57,166 [27] DEBUG Cell2:ML.Command.Proc - FG voltage: 4075 mV
+2023-08-11 12:50:57,166 [27] DEBUG Cell2:ML.Command.Proc - FG capacity: 2172 mAh
+2023-08-11 12:50:57,182 [27] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4056 mV
+2023-08-11 12:50:57,182 [27] DEBUG Cell2:ML.Command.Proc - FG RSOC: 54%
+2023-08-11 12:50:57,182 [27] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:50:57,197 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:50:57,197 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:50:57,551 [44] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 54%
+2023-08-11 12:50:57,598 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:50:57,598 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 54 Percent
+2023-08-11 12:50:57,598 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 54% >>> 56% target
+2023-08-11 12:51:02,610 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:51:02,907 [34] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:51:02,907 [34] DEBUG Cell2:ML.Command.Proc - FG Temp: 40.09 deg C
+2023-08-11 12:51:02,907 [34] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:51:02,907 [34] DEBUG Cell2:ML.Command.Proc - FG voltage: 4077 mV
+2023-08-11 12:51:02,907 [34] DEBUG Cell2:ML.Command.Proc - FG capacity: 2171 mAh
+2023-08-11 12:51:02,923 [34] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4063 mV
+2023-08-11 12:51:02,923 [34] DEBUG Cell2:ML.Command.Proc - FG RSOC: 54%
+2023-08-11 12:51:02,923 [34] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:51:02,938 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:51:02,938 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:51:03,297 [37] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 54%
+2023-08-11 12:51:03,329 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:51:03,329 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 54 Percent
+2023-08-11 12:51:03,329 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 54% >>> 56% target
+2023-08-11 12:51:08,349 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:51:08,630 [27] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:51:08,630 [27] DEBUG Cell2:ML.Command.Proc - FG Temp: 40.00 deg C
+2023-08-11 12:51:08,630 [27] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:51:08,630 [27] DEBUG Cell2:ML.Command.Proc - FG voltage: 4078 mV
+2023-08-11 12:51:08,630 [27] DEBUG Cell2:ML.Command.Proc - FG capacity: 2171 mAh
+2023-08-11 12:51:08,630 [27] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4068 mV
+2023-08-11 12:51:08,646 [27] DEBUG Cell2:ML.Command.Proc - FG RSOC: 54%
+2023-08-11 12:51:08,646 [27] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:51:08,677 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:51:08,677 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:51:09,035 [48] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 54%
+2023-08-11 12:51:09,051 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:51:09,051 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 54 Percent
+2023-08-11 12:51:09,051 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 54% >>> 56% target
+2023-08-11 12:51:14,059 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:51:14,340 [33] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:51:14,340 [33] DEBUG Cell2:ML.Command.Proc - FG Temp: 40.00 deg C
+2023-08-11 12:51:14,340 [33] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:51:14,340 [33] DEBUG Cell2:ML.Command.Proc - FG voltage: 4079 mV
+2023-08-11 12:51:14,340 [33] DEBUG Cell2:ML.Command.Proc - FG capacity: 2171 mAh
+2023-08-11 12:51:14,340 [33] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4072 mV
+2023-08-11 12:51:14,355 [33] DEBUG Cell2:ML.Command.Proc - FG RSOC: 54%
+2023-08-11 12:51:14,355 [33] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:51:14,387 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:51:14,387 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:51:14,742 [37] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 54%
+2023-08-11 12:51:14,757 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:51:14,757 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 54 Percent
+2023-08-11 12:51:14,757 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 54% >>> 56% target
+2023-08-11 12:51:19,775 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:51:20,056 [33] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:51:20,056 [33] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.90 deg C
+2023-08-11 12:51:20,056 [33] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:51:20,056 [33] DEBUG Cell2:ML.Command.Proc - FG voltage: 4081 mV
+2023-08-11 12:51:20,056 [33] DEBUG Cell2:ML.Command.Proc - FG capacity: 2170 mAh
+2023-08-11 12:51:20,056 [33] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4075 mV
+2023-08-11 12:51:20,071 [33] DEBUG Cell2:ML.Command.Proc - FG RSOC: 54%
+2023-08-11 12:51:20,071 [33] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:51:20,103 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:51:20,103 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:51:20,432 [28] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 54%
+2023-08-11 12:51:20,463 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:51:20,463 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 54 Percent
+2023-08-11 12:51:20,463 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 54% >>> 56% target
+2023-08-11 12:51:25,478 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:51:25,759 [28] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:51:25,759 [28] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.90 deg C
+2023-08-11 12:51:25,759 [28] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:51:25,759 [28] DEBUG Cell2:ML.Command.Proc - FG voltage: 4082 mV
+2023-08-11 12:51:25,759 [28] DEBUG Cell2:ML.Command.Proc - FG capacity: 2170 mAh
+2023-08-11 12:51:25,775 [28] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4077 mV
+2023-08-11 12:51:25,775 [28] DEBUG Cell2:ML.Command.Proc - FG RSOC: 54%
+2023-08-11 12:51:25,775 [28] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:51:25,790 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:51:25,790 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:51:26,100 [37] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 54%
+2023-08-11 12:51:26,131 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:51:26,131 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 54 Percent
+2023-08-11 12:51:26,131 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 54% >>> 56% target
+2023-08-11 12:51:31,150 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:51:31,447 [31] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:51:31,447 [31] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.90 deg C
+2023-08-11 12:51:31,447 [31] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:51:31,447 [31] DEBUG Cell2:ML.Command.Proc - FG voltage: 4082 mV
+2023-08-11 12:51:31,447 [31] DEBUG Cell2:ML.Command.Proc - FG capacity: 2170 mAh
+2023-08-11 12:51:31,447 [31] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4079 mV
+2023-08-11 12:51:31,447 [31] DEBUG Cell2:ML.Command.Proc - FG RSOC: 54%
+2023-08-11 12:51:31,447 [31] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:51:31,478 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:51:31,478 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:51:31,759 [35] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 54%
+2023-08-11 12:51:31,775 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:51:31,775 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 54 Percent
+2023-08-11 12:51:31,775 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 54% >>> 56% target
+2023-08-11 12:51:36,793 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:51:37,090 [46] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:51:37,090 [46] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:51:37,090 [46] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:51:37,090 [46] DEBUG Cell2:ML.Command.Proc - FG voltage: 4083 mV
+2023-08-11 12:51:37,090 [46] DEBUG Cell2:ML.Command.Proc - FG capacity: 2170 mAh
+2023-08-11 12:51:37,090 [46] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4080 mV
+2023-08-11 12:51:37,105 [46] DEBUG Cell2:ML.Command.Proc - FG RSOC: 54%
+2023-08-11 12:51:37,105 [46] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:51:37,121 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:51:37,121 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:51:37,487 [27] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 54%
+2023-08-11 12:51:37,518 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:51:37,518 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 54 Percent
+2023-08-11 12:51:37,518 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 54% >>> 56% target
+2023-08-11 12:51:42,540 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:51:42,822 [35] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:51:42,822 [35] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:51:42,822 [35] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:51:42,822 [35] DEBUG Cell2:ML.Command.Proc - FG voltage: 4084 mV
+2023-08-11 12:51:42,837 [35] DEBUG Cell2:ML.Command.Proc - FG capacity: 2170 mAh
+2023-08-11 12:51:42,837 [35] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4081 mV
+2023-08-11 12:51:42,837 [35] DEBUG Cell2:ML.Command.Proc - FG RSOC: 54%
+2023-08-11 12:51:42,837 [35] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:51:42,869 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:51:42,869 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:51:43,210 [46] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 54%
+2023-08-11 12:51:43,241 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:51:43,241 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 54 Percent
+2023-08-11 12:51:43,241 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 54% >>> 56% target
+2023-08-11 12:51:48,256 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:51:48,554 [31] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:51:48,554 [31] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:51:48,554 [31] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:51:48,554 [31] DEBUG Cell2:ML.Command.Proc - FG voltage: 4085 mV
+2023-08-11 12:51:48,554 [31] DEBUG Cell2:ML.Command.Proc - FG capacity: 2170 mAh
+2023-08-11 12:51:48,569 [31] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4082 mV
+2023-08-11 12:51:48,569 [31] DEBUG Cell2:ML.Command.Proc - FG RSOC: 54%
+2023-08-11 12:51:48,569 [31] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:51:48,585 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:51:48,585 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:51:48,941 [33] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 54%
+2023-08-11 12:51:48,957 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:51:48,957 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 54 Percent
+2023-08-11 12:51:48,957 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 54% >>> 56% target
+2023-08-11 12:51:53,968 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:51:54,249 [31] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:51:54,249 [31] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:51:54,249 [31] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:51:54,249 [31] DEBUG Cell2:ML.Command.Proc - FG voltage: 4085 mV
+2023-08-11 12:51:54,249 [31] DEBUG Cell2:ML.Command.Proc - FG capacity: 2170 mAh
+2023-08-11 12:51:54,249 [31] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4083 mV
+2023-08-11 12:51:54,249 [31] DEBUG Cell2:ML.Command.Proc - FG RSOC: 54%
+2023-08-11 12:51:54,249 [31] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:51:54,280 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:51:54,280 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:51:54,608 [33] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 54%
+2023-08-11 12:51:54,640 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:51:54,640 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 54 Percent
+2023-08-11 12:51:54,640 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 54% >>> 56% target
+2023-08-11 12:51:59,651 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:51:59,979 [49] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:51:59,979 [49] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:51:59,979 [49] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:51:59,979 [49] DEBUG Cell2:ML.Command.Proc - FG voltage: 4086 mV
+2023-08-11 12:51:59,979 [49] DEBUG Cell2:ML.Command.Proc - FG capacity: 2170 mAh
+2023-08-11 12:51:59,979 [49] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4084 mV
+2023-08-11 12:51:59,995 [49] DEBUG Cell2:ML.Command.Proc - FG RSOC: 55%
+2023-08-11 12:51:59,995 [49] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:52:00,026 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:52:00,026 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:52:00,345 [33] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 55%
+2023-08-11 12:52:00,377 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:52:00,377 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 55 Percent
+2023-08-11 12:52:00,377 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Charing Batery SoC Level || 55 % || Pass
+2023-08-11 12:52:00,392 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 55% >>> 56% target
+2023-08-11 12:52:05,404 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:52:05,685 [28] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:52:05,685 [28] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:52:05,685 [28] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:52:05,685 [28] DEBUG Cell2:ML.Command.Proc - FG voltage: 4087 mV
+2023-08-11 12:52:05,685 [28] DEBUG Cell2:ML.Command.Proc - FG capacity: 2169 mAh
+2023-08-11 12:52:05,685 [28] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4085 mV
+2023-08-11 12:52:05,701 [28] DEBUG Cell2:ML.Command.Proc - FG RSOC: 55%
+2023-08-11 12:52:05,701 [28] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:52:05,717 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:52:05,717 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:52:06,058 [49] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 55%
+2023-08-11 12:52:06,074 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:52:06,074 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 55 Percent
+2023-08-11 12:52:06,074 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 55% >>> 56% target
+2023-08-11 12:52:11,093 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:52:11,405 [48] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:52:11,405 [48] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:52:11,405 [48] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:52:11,405 [48] DEBUG Cell2:ML.Command.Proc - FG voltage: 4087 mV
+2023-08-11 12:52:11,405 [48] DEBUG Cell2:ML.Command.Proc - FG capacity: 2169 mAh
+2023-08-11 12:52:11,405 [48] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4086 mV
+2023-08-11 12:52:11,421 [48] DEBUG Cell2:ML.Command.Proc - FG RSOC: 55%
+2023-08-11 12:52:11,421 [48] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:52:11,452 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:52:11,452 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:52:11,785 [46] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 55%
+2023-08-11 12:52:11,801 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:52:11,801 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 55 Percent
+2023-08-11 12:52:11,801 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 55% >>> 56% target
+2023-08-11 12:52:16,822 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:52:17,119 [48] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:52:17,119 [48] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:52:17,119 [48] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:52:17,119 [48] DEBUG Cell2:ML.Command.Proc - FG voltage: 4088 mV
+2023-08-11 12:52:17,119 [48] DEBUG Cell2:ML.Command.Proc - FG capacity: 2169 mAh
+2023-08-11 12:52:17,135 [48] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4086 mV
+2023-08-11 12:52:17,135 [48] DEBUG Cell2:ML.Command.Proc - FG RSOC: 55%
+2023-08-11 12:52:17,135 [48] DEBUG Cell2:ML.Command.Proc - FG USOC: 56%
+2023-08-11 12:52:17,151 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:52:17,151 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:52:17,499 [35] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 55%
+2023-08-11 12:52:17,530 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:52:17,530 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 55 Percent
+2023-08-11 12:52:17,530 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 55% >>> 56% target
+2023-08-11 12:52:22,541 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:52:22,846 [48] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:52:22,846 [48] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.70 deg C
+2023-08-11 12:52:22,846 [48] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:52:22,846 [48] DEBUG Cell2:ML.Command.Proc - FG voltage: 4088 mV
+2023-08-11 12:52:22,846 [48] DEBUG Cell2:ML.Command.Proc - FG capacity: 2169 mAh
+2023-08-11 12:52:22,846 [48] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4087 mV
+2023-08-11 12:52:22,846 [48] DEBUG Cell2:ML.Command.Proc - FG RSOC: 55%
+2023-08-11 12:52:22,846 [48] DEBUG Cell2:ML.Command.Proc - FG USOC: 57%
+2023-08-11 12:52:22,877 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:52:22,877 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:52:23,190 [34] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 55%
+2023-08-11 12:52:23,205 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:52:23,205 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 55 Percent
+2023-08-11 12:52:23,205 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 55% >>> 56% target
+2023-08-11 12:52:28,223 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:52:28,577 [26] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:52:28,579 [26] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:52:28,581 [26] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:52:28,582 [26] DEBUG Cell2:ML.Command.Proc - FG voltage: 4088 mV
+2023-08-11 12:52:28,583 [26] DEBUG Cell2:ML.Command.Proc - FG capacity: 2169 mAh
+2023-08-11 12:52:28,584 [26] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4087 mV
+2023-08-11 12:52:28,585 [26] DEBUG Cell2:ML.Command.Proc - FG RSOC: 55%
+2023-08-11 12:52:28,586 [26] DEBUG Cell2:ML.Command.Proc - FG USOC: 57%
+2023-08-11 12:52:28,588 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:52:28,590 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:52:28,911 [27] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 55%
+2023-08-11 12:52:28,914 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:52:28,915 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 55 Percent
+2023-08-11 12:52:28,916 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 55% >>> 56% target
+2023-08-11 12:5f2:33,918 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:52:34,204 [34] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:52:34,205 [34] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:52:34,206 [34] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:52:34,206 [34] DEBUG Cell2:ML.Command.Proc - FG voltage: 4089 mV
+2023-08-11 12:52:34,207 [34] DEBUG Cell2:ML.Command.Proc - FG capacity: 2169 mAh
+2023-08-11 12:52:34,207 [34] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4088 mV
+2023-08-11 12:52:34,208 [34] DEBUG Cell2:ML.Command.Proc - FG RSOC: 55%
+2023-08-11 12:52:34,209 [34] DEBUG Cell2:ML.Command.Proc - FG USOC: 57%
+2023-08-11 12:52:34,216 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:52:34,217 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:52:34,519 [35] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 55%
+2023-08-11 12:52:34,533 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:52:34,534 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 55 Percent
+2023-08-11 12:52:34,536 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 55% >>> 56% target
+2023-08-11 12:52:39,538 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:52:39,824 [47] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:52:39,825 [47] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:52:39,826 [47] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:52:39,827 [47] DEBUG Cell2:ML.Command.Proc - FG voltage: 4089 mV
+2023-08-11 12:52:39,828 [47] DEBUG Cell2:ML.Command.Proc - FG capacity: 2169 mAh
+2023-08-11 12:52:39,829 [47] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4088 mV
+2023-08-11 12:52:39,830 [47] DEBUG Cell2:ML.Command.Proc - FG RSOC: 55%
+2023-08-11 12:52:39,831 [47] DEBUG Cell2:ML.Command.Proc - FG USOC: 57%
+2023-08-11 12:52:39,836 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:52:39,837 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:52:40,128 [31] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 55%
+2023-08-11 12:52:40,133 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:52:40,137 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 55 Percent
+2023-08-11 12:52:40,141 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 55% >>> 56% target
+2023-08-11 12:52:45,145 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:52:45,434 [27] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:52:45,436 [27] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:52:45,438 [27] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:52:45,440 [27] DEBUG Cell2:ML.Command.Proc - FG voltage: 4090 mV
+2023-08-11 12:52:45,442 [27] DEBUG Cell2:ML.Command.Proc - FG capacity: 2169 mAh
+2023-08-11 12:52:45,443 [27] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4089 mV
+2023-08-11 12:52:45,445 [27] DEBUG Cell2:ML.Command.Proc - FG RSOC: 55%
+2023-08-11 12:52:45,448 [27] DEBUG Cell2:ML.Command.Proc - FG USOC: 57%
+2023-08-11 12:52:45,451 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:52:45,454 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:52:45,800 [34] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 55%
+2023-08-11 12:52:45,812 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:52:45,814 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 55 Percent
+2023-08-11 12:52:45,816 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 55% >>> 56% target
+2023-08-11 12:52:50,819 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:52:51,105 [27] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:52:51,106 [27] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:52:51,108 [27] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:52:51,109 [27] DEBUG Cell2:ML.Command.Proc - FG voltage: 4090 mV
+2023-08-11 12:52:51,110 [27] DEBUG Cell2:ML.Command.Proc - FG capacity: 2169 mAh
+2023-08-11 12:52:51,112 [27] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4089 mV
+2023-08-11 12:52:51,113 [27] DEBUG Cell2:ML.Command.Proc - FG RSOC: 55%
+2023-08-11 12:52:51,114 [27] DEBUG Cell2:ML.Command.Proc - FG USOC: 57%
+2023-08-11 12:52:51,119 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:52:51,121 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:52:51,485 [39] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 55%
+2023-08-11 12:52:51,498 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:52:51,502 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 55 Percent
+2023-08-11 12:52:51,504 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 55% >>> 56% target
+2023-08-11 12:52:56,507 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:52:56,858 [29] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:52:56,859 [29] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:52:56,860 [29] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:52:56,861 [29] DEBUG Cell2:ML.Command.Proc - FG voltage: 4091 mV
+2023-08-11 12:52:56,862 [29] DEBUG Cell2:ML.Command.Proc - FG capacity: 2169 mAh
+2023-08-11 12:52:56,863 [29] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4090 mV
+2023-08-11 12:52:56,864 [29] DEBUG Cell2:ML.Command.Proc - FG RSOC: 55%
+2023-08-11 12:52:56,864 [29] DEBUG Cell2:ML.Command.Proc - FG USOC: 57%
+2023-08-11 12:52:56,872 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:52:56,873 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:52:57,240 [44] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 55%
+2023-08-11 12:52:57,252 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:52:57,255 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 55 Percent
+2023-08-11 12:52:57,257 [18] INFO Cell2:ML.ViewModels.CellVM - Battery charging: 55% >>> 56% target
+2023-08-11 12:53:02,261 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 0c
+2023-08-11 12:53:02,609 [35] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:53:02,610 [35] DEBUG Cell2:ML.Command.Proc - FG Temp: 39.79 deg C
+2023-08-11 12:53:02,611 [35] DEBUG Cell2:ML.Command.Proc - FG current: 1219 mA
+2023-08-11 12:53:02,612 [35] DEBUG Cell2:ML.Command.Proc - FG voltage: 4091 mV
+2023-08-11 12:53:02,614 [35] DEBUG Cell2:ML.Command.Proc - FG capacity: 2169 mAh
+2023-08-11 12:53:02,615 [35] DEBUG Cell2:ML.Command.Proc - FG avg voltage: 4090 mV
+2023-08-11 12:53:02,616 [35] DEBUG Cell2:ML.Command.Proc - FG RSOC: 56%
+2023-08-11 12:53:02,617 [35] DEBUG Cell2:ML.Command.Proc - FG USOC: 57%
+2023-08-11 12:53:02,623 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 0c with ExitCode 0
+2023-08-11 12:53:02,625 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fg 07
+2023-08-11 12:53:02,923 [29] DEBUG Cell2:ML.Command.Proc - OK: FG RSOC: 56%
+2023-08-11 12:53:02,937 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fg 07 with ExitCode 0
+2023-08-11 12:53:02,940 [18] DEBUG Cell2:ML.TotemCmd.Models.FuelGauge - Read Fuel Gauge battery relative SoC = 56 Percent
+2023-08-11 12:53:02,943 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Charing Batery SoC Level || 56 % || Pass
+2023-08-11 12:53:02,945 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Final Battery SoC || 56 || LL:  56 || UL:  58 || Pass
+2023-08-11 12:53:02,957 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  gpio 010300
+2023-08-11 12:53:03,302 [34] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:53:03,332 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  gpio 010300 with ExitCode 0
+2023-08-11 12:53:03,335 [18] INFO Cell2:ML.TotemCmd.Models.GPIO - Wrote HEX value 0x00 to GPIO pin 0x03
+2023-08-11 12:53:04,339 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  mode 0100
+2023-08-11 12:53:04,622 [47] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:53:04,640 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  mode 0100 with ExitCode 0
+2023-08-11 12:53:04,641 [18] INFO Cell2:ML.TotemCmd.Models.Mode - Device mode set to Application Mode
+2023-08-11 12:53:05,642 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Reboot To Normal Mode || True || Pass
+2023-08-11 12:53:05,649 [18] INFO Cell2:ML.ViewModels.CellVM - Attempting to establish USB FCMD comm for 20000 milliseconds
+2023-08-11 12:53:05,650 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  mode 00
+2023-08-11 12:53:05,952 [44] DEBUG Cell2:ML.Command.Proc - OK: (HEX) 00
+2023-08-11 12:53:05,966 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  mode 00 with ExitCode 0
+2023-08-11 12:53:05,967 [18] INFO Cell2:ML.TotemCmd.Models.Mode - Device mode = 0x00 <<Active Mode (Normal)>>
+2023-08-11 12:53:06,468 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Device Mode || ActiveMode || Pass
+2023-08-11 12:53:06,470 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  fkill 00
+2023-08-11 12:53:06,771 [46] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:53:06,799 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  fkill 00 with ExitCode 0
+2023-08-11 12:53:06,801 [18] INFO Cell2:ML.TotemCmd.Models.Fkill - Turning off device
+2023-08-11 12:53:06,803 [18] INFO Cell2:ML.ViewModels.CellVM - Step <<ChargeToSpec>> index [5 / 7] passed on attempt <<1 of 1>>
+2023-08-11 12:53:06,805 [18] INFO Cell2:ML.ViewModels.CellVM - Clean run, no DependencySteps. Resuming main TestSequence steps
+2023-08-11 12:53:06,806 [18] INFO Cell2:ML.ViewModels.CellVM - Step <<ChargeToSpec>> will be followed by <<Skip>> per MARIO TestSequence config list
+2023-08-11 12:53:06,808 [18] INFO Cell2:ML.ViewModels.CellVM - Cell2 next step [Skip] is not blocked by other cells
+2023-08-11 12:53:06,812 [18] INFO Cell2:ML.ViewModels.CellVM - 
+
+#################################################################################################################
+Cell2 Device SN: G8734T10007E Test Name: Skipped Test [6 / 7] Attempt: 1 / 1
+#################################################################################################################
+2023-08-11 12:53:06,813 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Skipped Test || Index [006] || Pass
+2023-08-11 12:53:06,823 [18] INFO Cell2:ML.ViewModels.CellVM - Step <<Skip>> index [6 / 7] passed on attempt <<1 of 1>>
+2023-08-11 12:53:06,825 [18] INFO Cell2:ML.ViewModels.CellVM - Clean run, no DependencySteps. Resuming main TestSequence steps
+2023-08-11 12:53:06,827 [18] INFO Cell2:ML.ViewModels.CellVM - Step <<Skip>> will be followed by <<Complete>> per MARIO TestSequence config list
+2023-08-11 12:53:06,829 [18] INFO Cell2:ML.ViewModels.CellVM - Cell2 next step [Complete] is not blocked by other cells
+2023-08-11 12:53:06,834 [18] INFO Cell2:ML.ViewModels.CellVM - 
+
+#################################################################################################################
+Cell2 Device SN: G8734T10007E Test Name: Complete [7 / 7] Attempt: 1 / 1
+#################################################################################################################
+2023-08-11 12:53:06,836 [18] INFO Cell2:ML.ViewModels.CellVM - Steps.Complete: Test sequence ended
+2023-08-11 12:53:06,838 [18] DEBUG ML.MetaArtifacts.Metadata - Start post:  {
+  "Meta": {
+    "HardwareBuild": "UNKNOWN",
+    "ProcessName": "TBFC",
+    "SoftwareBuild": "5628-F8",
+    "StationSoftwareBuild": "v2023.1.9.2",
+    "EquipmentName": "GDLDWTBFC203",
+    "Carrier": "Cell2"
+  }
+}
+2023-08-11 12:53:06,865 [18] INFO Cell2:ML.ViewModels.CellVM - Clearing logs from device
+2023-08-11 12:53:06,867 [18] INFO Cell2:ML.Command.Proc - Begin Execute:  fcmd --protocol com:5  log 02
+2023-08-11 12:53:07,193 [48] DEBUG Cell2:ML.Command.Proc - OK: 
+2023-08-11 12:53:07,208 [18] INFO Cell2:ML.Command.Proc - End Execute:  fcmd --protocol com:5  log 02 with ExitCode 0
+2023-08-11 12:53:07,212 [18] INFO Cell2:ML.ViewModels.MeasurementsVM - Run Meta ID || 1322077 || Pass
+2023-08-11 12:53:07,238 [18] INFO Cell2:ML.ViewModels.CellVM - Logging to CSV. Local directory: C:\Data\Results\
+2023-08-11 12:53:07,242 [18] INFO Cell2:ML.ViewModels.CellVM - CSV results data saved locally to: C:\Data\Results\G8734T10007E_20230811_125307.csv
+2023-08-11 12:53:07,245 [18] INFO Cell2:ML.ViewModels.CellVM - Logging to MES. Local directory: C:\Data\MES
+2023-08-11 12:53:07,247 [18] INFO Cell2:ML.MES_API.LogData - {
+  "assemblyNumber": null,
+  "assemblyRevision": null,
+  "assemblyVersion": null,
+  "equipmentName": "GDLDWTBFC203",
+  "failLabel": "Flow Check",
+  "failMessage": null,
+  "fixture": "2",
+  "line": null,
+  "measurements": [
+    {
+      "Brush": "#FF00BFFF",
+      "ElapsedTime": "00:00:00.1917147",
+      "StepTime": "00:00:00.0193534",
+      "behavior": "Abort",
+      "lowerLimit": null,
+      "measurementStatus": false,
+      "message": null,
+      "name": "Flow Check",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "Disabled"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:00:00.0350555",
+      "StepTime": "00:00:00.0350555",
+      "behavior": "Abort",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "Verify Serial Number Format",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "G8734T10007E"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:00:00.0546614",
+      "StepTime": "00:00:00.0196059",
+      "behavior": "Abort",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "Station SW Version",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "v2023.1.9.2"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:00:00.0664727",
+      "StepTime": "00:00:00.0118113",
+      "behavior": "Abort",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "Station Mode",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "PRODUCTION"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:00:00.0677948",
+      "StepTime": "00:00:00.0013221",
+      "behavior": "Fail",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "Win FCMD COM Port",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "COM5"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:00:00.1723613",
+      "StepTime": "00:00:00.1045665",
+      "behavior": "Abort",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "FCMD Version",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "0.7"
+    },
+    {
+      "Brush": "#FF00BFFF",
+      "ElapsedTime": "00:00:00.1917147",
+      "StepTime": "00:00:00.0193534",
+      "behavior": "Abort",
+      "lowerLimit": null,
+      "measurementStatus": false,
+      "message": null,
+      "name": "Flow Check",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "Disabled"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:00:00.5442840",
+      "StepTime": "00:00:00.3525693",
+      "behavior": "Fail",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "Board Serial Number",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "G772PT1002BK"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:00:00.8769443",
+      "StepTime": "00:00:00.3326603",
+      "behavior": "Fail",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "Device Serial Number",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "G8734T10007E"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:00:01.2928168",
+      "StepTime": "00:00:00.4158725",
+      "behavior": "Fail",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "TotemSwBuildDate",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "1683561234"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:00:01.6698308",
+      "StepTime": "00:00:00.3770140",
+      "behavior": "Fail",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "TotemSwType",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "FACTORY"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:00:02.0097384",
+      "StepTime": "00:00:00.3399076",
+      "behavior": "Fail",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "TotemSwBuildNumber",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "5628-F8"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:00:02.8173716",
+      "StepTime": "00:00:00.8076332",
+      "behavior": "Fail",
+      "lowerLimit": "0",
+      "measurementStatus": true,
+      "message": null,
+      "name": "Initial Battery SoC",
+      "nominalValue": "NaN",
+      "units": "Percent",
+      "upperLimit": "100",
+      "value": "53"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:00:09.2561982",
+      "StepTime": "00:00:06.4388266",
+      "behavior": "Fail",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "Enter Charge-Only Mode",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "True"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:00:32.0726730",
+      "StepTime": "00:00:22.8164748",
+      "behavior": "Fail",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "Charing Batery SoC Level",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "54 %"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:01:46.3673795",
+      "StepTime": "00:01:14.2947065",
+      "behavior": "Fail",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "Charing Batery SoC Level",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "55 %"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:02:48.9285994",
+      "StepTime": "00:01:02.5612199",
+      "behavior": "Fail",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "Charing Batery SoC Level",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "56 %"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:02:48.9313174",
+      "StepTime": "00:00:00.0027180",
+      "behavior": "Fail",
+      "lowerLimit": "56",
+      "measurementStatus": true,
+      "message": null,
+      "name": "Final Battery SoC",
+      "nominalValue": "NaN",
+      "units": "Percent",
+      "upperLimit": "58",
+      "value": "56"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:02:51.6281137",
+      "StepTime": "00:00:02.6967963",
+      "behavior": "Fail",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "Reboot To Normal Mode",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "True"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:02:52.4541632",
+      "StepTime": "00:00:00.8260495",
+      "behavior": "Fail",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "Device Mode",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "ActiveMode"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:02:52.7999624",
+      "StepTime": "00:00:00.3457992",
+      "behavior": "Fail",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "Skipped Test",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "Index [006]"
+    },
+    {
+      "Brush": "#FF32CD32",
+      "ElapsedTime": "00:02:53.1984291",
+      "StepTime": "00:00:00.3984667",
+      "behavior": "Abort",
+      "lowerLimit": null,
+      "measurementStatus": true,
+      "message": null,
+      "name": "Run Meta ID",
+      "nominalValue": null,
+      "units": null,
+      "upperLimit": null,
+      "value": "1322077"
+    }
+  ],
+  "operatorId": null,
+  "process": "TBFC",
+  "serialNumber": "G8734T10007E",
+  "startDateTime": "2023-08-11. 12:50:14",
+  "stopDateTime": "2023-08-11. 12:53:07",
+  "testStatus": "A"
+}
+2023-08-11 12:53:07,427 [18] DEBUG Cell2:ML.MES_API.LogData - {"message":"An error has occurred.","exceptionMessage":"[MES message]: Tester not found in equipment table","exceptionType":"System.ApplicationException","stackTrace":"   at MesInterface.Data.Repositories.TestDataRepository.SendToWebService(String formattedString) in C:\\Visual Studio\\DiagnosticTest API\\MyWebApiProject.Data\\Repositories\\TestDataRepository.cs:line 109\r\n   at MesInterface.Data.Repositories.TestDataRepository.<LogTest>d__1.MoveNext() in C:\\Visual Studio\\DiagnosticTest API\\MyWebApiProject.Data\\Repositories\\TestDataRepository.cs:line 53\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at MesInterface.Services.Handlers.TestDataHandler.<Handle>d__3.MoveNext() in C:\\Visual Studio\\DiagnosticTest API\\MyWebApiProject.Services\\Handlers\\TestDataHandler.cs:line 41\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at MesInterface.Services.MediatorAsyncPipeline`2.<Handle>d__4.MoveNext() in C:\\Visual Studio\\DiagnosticTest API\\MyWebApiProject.Services\\MediatorPipeline.cs:line 43\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at MesInterface.Controllers.LoggingController.<LogTest>d__2.MoveNext() in C:\\Visual Studio\\DiagnosticTest API\\MyWebApiProject\\Controllers\\LoggingController.cs:line 30\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext()"}
+2023-08-11 12:53:07,429 [18] ERROR Cell2:ML.MES_API.LogData - An error has occurred.
+2023-08-11 12:53:07,431 [18] DEBUG Cell2:ML.MES_API.LogData - System.ApplicationException
